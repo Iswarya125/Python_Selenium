@@ -1,0 +1,96 @@
+1. Web driver locators
+    Id
+    Name
+    Class
+    css
+    xpath
+    link text
+    tagname
+
+    css:
+    In selenium : - tagname[attribute='value'] -- tagname is optional
+    In firefox console : - $("tagname[attribute='value']")
+    Using Regex : - [tagname*='value']
+
+    xpath:
+    In selenium : - //tagname[@attribute='value'] -- tagname is optional
+    In firefox console : - $x("//tagname[@attribute='value']")
+    Using Regex : - //tagname[contains(@attribute,'value')] (or) //*[contains(@attribute,'value')]
+
+    Generating css from id:
+    In selenium : - tagname#idvalue -> tagname is optional
+    In firefox console : - $('#idvalue')
+
+    Generating css from classname:
+    tagname.classname - make sure no space between the classname - tagname optional
+
+##################
+css is faster locator than any other locators
+##################
+    linktext:
+
+    Works only for <a> - links starting with anchor tag - if not that is not a link at all.(as per html standard).
+
+    Generating xpath based on text:
+    //tagname[text()='xxx'] - tagname optional (similar to link text)
+
+    Xpath using parent child traversal:
+    parent_tag/child_tag
+    to chose nth child parent_tag/tag[n]/tag[n]....
+    eg: "//form[@name='login']/input[1]"
+
+    css using parent child traversal:
+    parent_tag child_tag
+    form[name='login'] input:nth-child(1)
+
+    ########################################
+    prefer xpath for parent child traversal
+    ########################################
+
+    Select:
+    For Select tag (static dropdowns) - python Select class can be used.
+
+    How will you check all the checkboxes in a given webpage?
+    Ans : Find a generic/common attribute for all the checkboxes and frame a locator for that attribute, then click method over that locator.
+
+    ###########################################
+    Implicit wait (below eg with 5 sec)
+    #########################################
+    # wait until 5 seconds if object is not displayed
+    #Global wait
+    #1.5 second to reach next page- execution will resume in 1.5 seconds
+    #if object do not show up at all, then max time your test waits for 5 seconds
+
+
+    #######################################
+    Explicit wait
+    ######################################
+
+    Applies to that specific locator
+
+    If there is any specific requirement for loading then Implicit wait should not be used because it will
+    be applicable to all the loads.
+
+    If the server is slow then go with implicit wait
+    If environment has performance issue then proceed with implicit wait.
+
+    Choose the waits depending on the environment.
+
+    #############################################
+    Child to parent traversal
+    ############################################
+
+    It is possible only in xpath
+    syntax : child tag/parent::parent tagname
+    eg: ("//div[@class='product-action']/button/parent::div/parent::div/h4")
+    usage in code : elements = driver.find_elements_by_xpath("//div[@class='product-action']/button")
+                    for element in elements:
+                        ########################
+                        Notice below no / before parent
+                        ########################
+                        Items_selected.append(element.find_element_by_xpath("parent::div/parent::div/h4").text)
+
+
+    #####################################
+    Refer to ChildWindowHandling,Frames,ActionChains related python files for more sophisticated operations
+    #####################################
