@@ -94,3 +94,29 @@ css is faster locator than any other locators
     #####################################
     Refer to ChildWindowHandling,Frames,ActionChains related python files for more sophisticated operations
     #####################################
+
+    ########################################
+    Java script executer
+    #######################################
+    Before Selenium web elements are accessed using java script with the help of DOM (Document Object Model)
+    DOM has access to all the web elements. Some web elements could not be accessed by selenium but DOM can access all of them.
+
+    Selenium provide methods to execute the java script. DOM supports only multiple objects matching criteria, using indexing we need to access the corresponding element
+
+    There is no generic place where selenium fails so whenever selenium is not working out, try to use java script.
+    Java script provides more ways to access an element than selenium
+    Ex : 1.Whenever selenium updates an webelement using sendkeys method, that webelement value could not be read using .text
+         Workaround 1 :in Selenium is to use .getattribute method -> it is derived from javascript
+         even if the value attribute is not part of that webelement getattribute('value') worksout.
+         Workaround 2: Using java script
+        2.Using selenium scrolling is not possible here the solution is to use java script.
+        3. When the webelement is hidden by a pop-up selenium could not access it - here the solution is to use java script.
+
+    Note : Javascript executor is not used much, but knowledge about this is required.
+
+    #####################################################
+    browser options
+    ###################################################
+    Firefox as well as chrome browser provides many options which can be used to specify how the browser should be behaved during invocation.
+    Refer to internet for more options : https://selenium-python.readthedocs.io/api.html
+    headless is one of the option - where the browser will get invoked at the background - which saves time and memory

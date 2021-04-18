@@ -1,0 +1,28 @@
+1. In pytest all the files should start with test_ or ends with _test - inorder to be recognized by pytest
+2. Pytest methods should start with test keyword
+3. Any code to be recognized by pytest, it should be within the function
+4. py.test command is used to execute the pytest in commandline window
+5. To run the test in pycharm, configuration to be changed to pytest
+6. During command line execution, py.test -s -v -> shows the console output as well as verbose information.
+7. Between 2 pytest methods, 2 line spaces required
+8. In pytest, if 2 methods have same name in the same file - no error will be shown, 2nd method overrides the first one
+    Meaning : first method result will not be shown as well as that test method is ignored from the number of tests
+9. In assert, we can log message for failure followed by condition
+    eg: assert "hello" == "hai","String matching failure"
+10. py.test -k method keyword - to execute only the methods having the specified method keyword
+11. @pytest.mark.smoke -> to mark certain tests as smoke test and execute only them using -m keyword (like grouping some tests with smoke tag)
+    - other tags can also be used they are custom tags eg: @pytest.mark.test
+12. @pytest.mark.skip -> to skip that particular test from execution
+13. @pytest.mark.xfail -> testcase will be executed but result will not be considered
+14. Fixtures are available as setup and teardown (yield). conftest.py file is used to maintain the fixture(as centralized) can be used by all the testcases in that folder
+15. passing setup to each testcase could be tiresome, could be made easy
+ by defining a class and making the scope of test fixture as class ( refer to conftest.py and test_fixtures.py file)
+16. Refer to returning from the fixtures in conftest.py (DataSetup funtion)
+    Whenever fixture data is to be used in the test, fixture function name is required to be passed to the method, even if the class has marked with that fixture name
+    (eg : refer to test_fixture.py  Testexample2 class).
+17. Html report generation for pytest :
+    https://pytest-html.readthedocs.io/en/latest/installing.html#installing-pytest-html
+
+18. In the report logging related messages are captured by default but print message (stdout) would not be captured always so logging is preferred
+    Python has inbuilt facility to capture the logging messages to html reports
+    

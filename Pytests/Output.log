@@ -1,0 +1,12 @@
+2021-04-09 11:17:17,190 : INFO : Pytests.test_logging : Info message
+2021-04-09 11:17:17,192 : WARNING : Pytests.test_logging : Warning message
+2021-04-09 11:17:17,192 : ERROR : Pytests.test_logging : error message
+2021-04-09 11:17:17,192 : CRITICAL : Pytests.test_logging : critical message
+2021-04-09 11:38:33,164 : WARNING : Pytests.loggingClass : warning
+2021-04-09 11:40:25,056 : WARNING : Pytests.loggingClass : warning
+2021-04-09 11:41:18,499 : WARNING : test_fixturetryout1 : warning
+2021-04-09 11:43:07,562 : WARNING : test_fixturetryout1 : warning
+2021-04-09 11:43:07,603 : INFO : Pytests.test_logging : Info message
+2021-04-09 11:43:07,603 : WARNING : Pytests.test_logging : Warning message
+2021-04-09 11:43:07,603 : ERROR : Pytests.test_logging : error message
+2021-04-09 11:43:07,603 : CRITICAL : Pytests.test_logging : critical message

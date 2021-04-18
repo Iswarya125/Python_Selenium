@@ -89,7 +89,7 @@ for element in reversed(list2):
     print(element)
 
 
-with open("new.txt",'w') as writer:
+with open("new.txt", 'w') as writer:
     writer.writelines("hello")
     writer.writelines("hai")
     writer.write("hello")
