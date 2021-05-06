@@ -754,3 +754,23 @@ JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't fin
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1620199496333	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\iswar\\AppData\\Local\\Temp\\rust_mozprofileJ4m4IY"
+1620199497267	Marionette	INFO	Marionette enabled
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620199501239	Marionette	INFO	Listening on port 62265
+1620199501753	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.rahulshettyacademy.com"
+JavaScript error: resource://devtools/server/actors/webconsole/utils.js, line 406: SyntaxError: The expression is not a legal expression.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.rahulshettyacademy.com"
+1620267427855	Marionette	INFO	Stopped listening on port 62265
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+rs\\iswar\\AppData\\Local\\Temp\\rust_mozprofileUcFg44"
+1620199855595	Marionette	INFO	Marionette enabled
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620199859654	Marionette	INFO	Listening on port 62355
+1620199860167	Marionette	WARN	TLS certificate errors will be ignored for this session
+1620199863095	Marionette	INFO	Stopped listening on port 62355

@@ -25,4 +25,8 @@
 
 18. In the report logging related messages are captured by default but print message (stdout) would not be captured always so logging is preferred
     Python has inbuilt facility to capture the logging messages to html reports
-    
+
+###################################################################
+19. Class name should start with Test (note capital T).
+##################################################################
+ref : https://docs.pytest.org/en/stable/example/parametrize.html
